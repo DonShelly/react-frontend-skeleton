@@ -1,22 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import React from 'react'
-import AppRoutes from './routes/AppRoutes'
-import { Provider } from 'react-redux'
-import { store } from './store'
-import ErrorBoundary from './components/ErrorBoundary'
+import { useState } from 'react';
+import './App.css';
+import AppRoutes from './routes/AppRoutes';
+import ErrorBoundary from './components/ErrorBoundary';
+import Navbar from './components/Navbar';
+import './styles/global.css';
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Provider store={store}>
       <ErrorBoundary>
-        <AppRoutes />
+        <div>
+          <Navbar />
+          <AppRoutes />
+        </div>
       </ErrorBoundary>
-    </Provider>
   )
 }
 
