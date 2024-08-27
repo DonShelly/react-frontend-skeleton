@@ -1,3 +1,10 @@
+# Run
+
+```commandline
+npm run dev
+```
+
+
 # Tips and code slices
 
 ### Capture Additional Errors

@@ -15,9 +15,9 @@ class ErrorBoundary extends React.Component {
     // You can also log the error to an error reporting service
     console.error("ErrorBoundary caught an error", error, info);
     // You can send the error details to a monitoring service like Sentry here
-    if (process.env.REACT_APP_ENV === 'production') {
-      // Example: Sentry.captureException(error);
-    }
+    // if (process.env.REACT_APP_ENV === 'production') {
+    //   // Example: Sentry.captureException(error);
+    // }
   }
 
   render() {

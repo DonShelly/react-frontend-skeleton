@@ -7,9 +7,18 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+.yarn-integrity
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+package-lock.json
+
+# Build outputs
 dist
 dist-ssr
+build
 *.local
 
 # Editor directories and files
@@ -23,4 +32,30 @@ dist-ssr
 *.sln
 *.sw?
 
+# Environment variables
 .env
+.env.*
+
+# Virtual environments
+.venv
+
+# Testing and coverage
+coverage
+.nyc_output
+
+# Cypress
+cypress/videos
+cypress/screenshots
+
+# Caches and temporary files
+.eslintcache
+*.tmp
+*.temp
+*.temp.*
+*.tmp.*
+*.cache
+*.cache.*
+*.lock
+*.lock.*
+*.pid
+*.pid.*

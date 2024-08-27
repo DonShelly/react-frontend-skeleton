@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -9,7 +8,7 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/dashboard">Dashboard</Link> {/* Add the link to your new page */}
+          <Link to="/dashboard">Dashboard</Link>
         </li>
       </ul>
     </nav>

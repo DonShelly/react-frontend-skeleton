@@ -1,21 +1,22 @@
-import { useState } from 'react';
-import './App.css';
-import AppRoutes from './routes/AppRoutes';
-import ErrorBoundary from './components/ErrorBoundary';
-import Navbar from './components/Navbar';
-import './styles/global.css';
-
+import { Routes, Route } from 'react-router-dom'
+import ErrorBoundary from './components/ErrorBoundary'
+import Navbar from './components/Navbar'
+import HomePage from './pages/HomePage'
+import Dashboard from './pages/Dashboard'
+import NotFound from './pages/NotFound'
+import './App.css'
+import './styles/global.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-      <ErrorBoundary>
-        <div>
-          <Navbar />
-          <AppRoutes />
-        </div>
-      </ErrorBoundary>
+    <ErrorBoundary>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </ErrorBoundary>
   )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 import App from './App'; // or wherever your App component is located
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
@@ -14,9 +14,9 @@ Sentry.init({
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Routes>
       <App />
-    </BrowserRouter>
+    </Routes>
   </React.StrictMode>,
   document.getElementById('root')
 );
